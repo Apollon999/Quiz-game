@@ -7,3 +7,7 @@ if confirm.lower() != "yes":
     quit()
 
 print("Lets Play!")
+
+print("An unidentified serial killer horrified London year 1888.")
+
+print("1. In what london district was Jack the Ripper active? ")
