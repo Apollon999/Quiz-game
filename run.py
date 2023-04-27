@@ -10,4 +10,16 @@ print("Lets Play!")
 
 print("An unidentified serial killer horrified London year 1888.")
 
-print("1. In what london district was Jack the Ripper active? ")
+question = "1. In what city was Jack the Ripper active?\n\
+a. Chelsea\n\
+b. White Chapel\n\
+c. Oxford Street\n\
+d. ST. Giles\n\
+Enter your answer (a, b, c, or d) : "
+
+answer = input(question)
+
+if answer.lower() == "b":
+    print("Correct")
+else:
+    print("Incorrect. The correct answer is b. White Chapel.")
