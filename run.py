@@ -1,3 +1,5 @@
+import time
+
 print("Welcome to my Mysteries Quiz!")
 
 confirm = input("Do you want to play? ")
@@ -6,7 +8,12 @@ if confirm.lower() != "yes":
     print("Invalid input. Please type 'yes' to play.")
     quit()
 
+print("The Quiz begins in 5 seconds...")
+time.sleep(5)    
+
 print("Lets Play!")
+
+start_time = time.time()
 
 print("An unidentified serial killer horrified London year 1888.")
 
@@ -24,7 +31,7 @@ if answer.lower() == "b":
 else:
     print("Incorrect. The correct answer is b. White Chapel.")
 
-print("Passanger flight MH370 went missing in 2014 with 227 passengers onboard")
+print("Flight MH370 went missing in 2014 with 227 passengers onboard.")
 
 question = "2. By wich country's airlines was the plane operated?\n\
 a. Malaysia\n\
@@ -40,9 +47,9 @@ if answer.lower() == "a":
 else:
     print("Incorrect. The correct answer is a. Malaysia.")
 
-print("Winston Churchill defined something as 'a riddle, wrapped in a mystery, inside an enigma")
+print("'a riddle, wrapped in a mystery, inside an enigma'.")
 
-question = "3. What was Churchill talking about??\n\
+question = "3. What was Winston Churchill talking about??\n\
 a. Mathematics\n\
 b. Programming\n\
 c. Russia\n\
@@ -56,7 +63,7 @@ if answer.lower() == "c":
 else:
     print("Incorrect. The correct answer is c. Russia.")
 
-print("'Sweet little mystery' is the second single from a group's first album in July 1987.")
+print("'Sweet little mystery' is a single made in July 1987.")
 
 question = "1. What's the name of the group?\n\
 a. Oasis\n\
@@ -71,6 +78,12 @@ if answer.lower() == "d":
     print("Correct")
 else:
     print("Incorrect. The correct answer is d. Wet Wet Wet.")
+
+end_time = time.time()
+
+total_time = end_time - start_time
+
+print("You completed the Quiz in {:.2f} seconds. Awasome!".format(total_time))
 
 
 
