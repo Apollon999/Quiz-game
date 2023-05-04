@@ -15,6 +15,8 @@ print("Lets Play!")
 
 start_time = time.time()
 
+score = 0
+
 print("An unidentified serial killer horrified London year 1888.")
 
 question = "1. In what London district was Jack the Ripper active?\n\
@@ -28,6 +30,7 @@ answer = input(question)
 
 if answer.lower() == "b":
     print("Correct")
+    score += 1 
 else:
     print("Incorrect. The correct answer is b. White Chapel.")
 
@@ -44,6 +47,7 @@ answer = input(question)
 
 if answer.lower() == "a":
     print("Correct")
+    score += 1
 else:
     print("Incorrect. The correct answer is a. Malaysia.")
 
@@ -60,6 +64,7 @@ answer = input(question)
 
 if answer.lower() == "c":
     print("Correct")
+    score += 2
 else:
     print("Incorrect. The correct answer is c. Russia.")
 
@@ -76,6 +81,7 @@ answer = input(question)
 
 if answer.lower() == "d":
     print("Correct")
+    score += 2
 else:
     print("Incorrect. The correct answer is d. Wet Wet Wet.")
 
@@ -84,6 +90,8 @@ end_time = time.time()
 total_time = end_time - start_time
 
 print("You completed the Quiz in {:.2f} seconds. Awasome!".format(total_time))
+
+print("Your score is: {} out of 6.".format(score))
 
 
 
