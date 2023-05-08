@@ -1,5 +1,16 @@
 import time
 
+def get_valid_input(options):
+    """
+    This function repeatedly prompts the user to enter 
+    an option until a valid input is provided. It returns the valid input.
+    """
+    while true:
+        user_input = input("Enter your answer ({}): ".format(", ".join(options)))
+        if user_input.lower() in options:
+            return user_input.lower()
+        print("Invalid input. Please enter one of the following options: {}.".format(", ".join(options)))
+
 print("Welcome to my Mysteries Quiz!")
 
 confirm = input("Do you want to play? ")
