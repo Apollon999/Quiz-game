@@ -19,6 +19,14 @@ def ask_question(question, options, correct_answer, points):
     and options to the user, prompts them to enter
     an answer, validates the input, and returns the score 
     based on wether the answer is correct or not.
+    """
+    print("({} point) {}".format(points, question))
+    answer = get_valid_input(options)
+    if answer == correct_answer:
+        print("correct")
+        return points
+    else print("Incorrect. The correct answer is {}.".format(correct_answer.upper()))
+        return 0
 
 print("Welcome to my Mysteries Quiz!")
 
