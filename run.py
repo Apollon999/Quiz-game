@@ -16,7 +16,7 @@ start_time = time.time()
 
 score = 0
 
-print("An unidentified serial killer horrified London year 1888.")
+print("(1 Point) An unidentified serial killer horrified London year 1888.")
 
 question = "1. In what London district was Jack the Ripper active?\n\
 a. Chelsea\n\
@@ -36,7 +36,7 @@ if answer.lower() == "b":
 else:
     print("Incorrect. The correct answer is b. White Chapel.")
 
-print("Flight MH370 went missing in 2014 with 227 passengers onboard.")
+print("(1 Point)Flight MH370 went missing in 2014 with 227 passengers onboard.")
 
 question = "2. By wich country's airlines was the plane operated?\n\
 a. Malaysia\n\
@@ -56,7 +56,7 @@ if answer.lower() == "a":
 else:
     print("Incorrect. The correct answer is a. Malaysia.")
 
-print("'a riddle, wrapped in a mystery, inside an enigma'.")
+print("(2 Points)'a riddle, wrapped in a mystery, inside an enigma'.")
 
 question = "3. What was Winston Churchill talking about??\n\
 a. Mathematics\n\
@@ -76,7 +76,7 @@ if answer.lower() == "c":
 else:
     print("Incorrect. The correct answer is c. Russia.")
 
-print("'Sweet little mystery' is a single made in July 1987.")
+print("(2 Points)'Sweet little mystery' is a single made in July 1987.")
 
 question = "1. What's the name of the group?\n\
 a. Oasis\n\
