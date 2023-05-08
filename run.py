@@ -11,6 +11,15 @@ def get_valid_input(options):
             return user_input.lower()
         print("Invalid input. Please enter one of the following options: {}.".format(", ".join(options)))
 
+def ask_question(question, options, correct_answer, points):
+    """
+    This function takes a question, a list of options, the 
+    correct answer, and the number of points the question 
+    is worth as an input. It displays the questions
+    and options to the user, prompts them to enter
+    an answer, validates the input, and returns the score 
+    based on wether the answer is correct or not.
+
 print("Welcome to my Mysteries Quiz!")
 
 confirm = input("Do you want to play? ")
