@@ -4,9 +4,8 @@ print("Welcome to my Mysteries Quiz!")
 
 confirm = input("Do you want to play? ")
 
-if confirm.lower() != "yes":
-    print("Invalid input. Please type 'yes' to play.")
-    quit()
+while confirm.lower() != "yes":
+    confirm = input("Invalid input. Please type 'yes' to play.")
 
 print("The Quiz begins in 5 seconds...")
 time.sleep(5)    
@@ -28,6 +27,9 @@ Enter your answer (a, b, c, or d): "
 
 answer = input(question)
 
+while answer.lower() not in ["a", "b", "c", "d"]:
+    answer = input("Invalid input. Please enter a, b, c, or d." )
+
 if answer.lower() == "b":
     print("Correct")
     score += 1 
@@ -44,6 +46,9 @@ d. Singapore\n\
 Enter your answer (a, b, c, or d): "
 
 answer = input(question)
+
+while answer.lower() not in ["a", "b", "c", "d"]:
+    answer = input("Invalid input. Please enter a, b, c, or d." )
 
 if answer.lower() == "a":
     print("Correct")
@@ -62,6 +67,9 @@ Enter your answer (a, b, c, or d): "
 
 answer = input(question)
 
+while answer.lower() not in ["a", "b", "c", "d"]:
+    answer = input("Invalid input. Please enter a, b, c, or d." )
+
 if answer.lower() == "c":
     print("Correct")
     score += 2
@@ -78,6 +86,9 @@ d. Wet Wet Wet\n\
 Enter your answer (a, b, c, or d): "
 
 answer = input(question)
+
+while answer.lower() not in ["a", "b", "c", "d"]:
+    answer = input("Invalid input. Please enter a, b, c, or d." )
 
 if answer.lower() == "d":
     print("Correct")
