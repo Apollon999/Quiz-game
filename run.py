@@ -31,7 +31,7 @@ def ask_question(question, options, correct_answer, points):
         print("Incorrect. The correct answer is {}.".format(correct_answer.upper()))
         return 0
 
-def play_quiz():
+def play_quiz(play_again):
     """
     This function contains the main game loop for the quiz.
     It displays the welcome message and prompts the user to
@@ -40,22 +40,37 @@ def play_quiz():
     and the total time taken to complete the quiz.
     """
 
-print("Welcome to my Mysteries Quiz!")
-confirm = input("Do you want to play? ")
-while confirm.lower() != "yes":
-    confirm = input("Invalid input. Please type 'yes' to play.")
-print("The Quiz begins in 5 seconds...")
-time.sleep(5)    
-print("Lets Play!")
-start_time = time.time()
-score = 0
-score += ask_question("In what London district was Jack the Ripper active?", ["Chelsea", "White Chapel", "Oxford Street", "ST Giles"], "b", 1)
-score += ask_question("By which country's airlines was Flight MH370 operated?", ["Malaysia", "China", "Thailand", "Singapore"], "a", 1)
-score += ask_question("What was Winston Churchill talking about when he said 'a riddle, wrapped in a mystery, inside an enigma'?", ["Mathematics", "Programming", "Russia", "China"], "c", 2)
-score += ask_question("'Sweet little mystery' is a single made in July 1987 by which group?", ["Oasis", "Red Hot Chilli Peppers", "The Smashing Pumpkins", "Wet Wet Wet"], "d", 2)
-end_time = time.time()
-total_time = end_time - start_time
-print("You completed the Quiz in {:.2f} seconds. Awesome!".format(total_time))
-print("Your score is: {} out of 6.".format(score))
+playing_quiz = True
 
-play_quiz()
+while playing_quiz:
+    print("Welcome to my Mysteries Quiz!")
+    confirm = input("Do you want to play? ")
+    while confirm.lower() != "yes":
+        confirm = input("Invalid input. Please type 'yes' to play.")
+    print("The Quiz begins in 5 seconds...")
+    time.sleep(5)    
+    print("Lets Play!")
+    start_time = time.time()
+    score = 0
+    score += ask_question("In what London district was Jack the Ripper active?", ["Chelsea", "White Chapel", "Oxford Street", "ST Giles"], "b", 1)
+    score += ask_question("By which country's airlines was Flight MH370 operated?", ["Malaysia", "China", "Thailand", "Singapore"], "a", 1)
+    score += ask_question("What was Winston Churchill talking about when he said 'a riddle, wrapped in a mystery, inside an enigma'?", ["Mathematics", "Programming", "Russia", "China"], "c", 2)
+    score += ask_question("'Sweet little mystery' is a single made in July 1987 by which group?", ["Oasis", "Red Hot Chilli Peppers", "The Smashing Pumpkins", "Wet Wet Wet"], "d", 2)
+    end_time = time.time()
+    total_time = end_time - start_time
+    print("You completed the Quiz in {:.2f} seconds. Awesome!".format(total_time))
+    print("Your score is: {} out of 6.".format(score))
+
+    while True:
+        play_again = input("Do you want to play again? (yes/no) ")
+        if play_again.lower() == "yes":
+            break
+        elif play_again.lower() == "no":
+            playing_quiz = False
+            break
+        else:
+            print("Invalid input, please type 'yes' or 'no'.")
+            continue
+
+print("Thanks for playing!")
+
