@@ -9,7 +9,8 @@ def get_valid_input(options):
         user_input = input("Enter your answer ({}): ".format(", ".join(options)))
         if user_input.lower() in options:
             return user_input.lower()
-        print("Invalid input. Please enter one of the following options: {}.".format(", ".join(options)))
+        print("Invalid input. Please enter one of the following options:")
+        print(", ".join(options) + ".")
 
 def ask_question(question, options, correct_answer, points):
     """
@@ -31,7 +32,7 @@ def ask_question(question, options, correct_answer, points):
         print("Incorrect. The correct answer is {}.".format(correct_answer.upper()))
         return 0
 
-def play_quiz(play_again):
+def play_quiz():
     """
     This function contains the main game loop for the quiz.
     It displays the welcome message and prompts the user to
@@ -52,10 +53,14 @@ while playing_quiz:
     print("Lets Play!")
     start_time = time.time()
     score = 0
-    score += ask_question("In what London district was Jack the Ripper active?", ["Chelsea", "White Chapel", "Oxford Street", "ST Giles"], "b", 1)
-    score += ask_question("By which country's airlines was Flight MH370 operated?", ["Malaysia", "China", "Thailand", "Singapore"], "a", 1)
-    score += ask_question("What was Winston Churchill talking about when he said 'a riddle, wrapped in a mystery, inside an enigma'?", ["Mathematics", "Programming", "Russia", "China"], "c", 2)
-    score += ask_question("'Sweet little mystery' is a single made in July 1987 by which group?", ["Oasis", "Red Hot Chilli Peppers", "The Smashing Pumpkins", "Wet Wet Wet"], "d", 2)
+    score += ask_question("In what London district was Jack the Ripper active?",
+                          ["Chelsea", "White Chapel", "Oxford Street", "ST Giles"], "b", 1)
+    score += ask_question("By which country's airlines was Flight MH370 operated?", 
+                          ["Malaysia", "China", "Thailand", "Singapore"], "a", 1)
+    score += ask_question("What is 'a riddle, wrapped in a mystery, inside an enigma'?", 
+                          ["Mathematics", "Programming", "Russia", "China"], "c", 2)
+    score += ask_question("'Sweet little mystery' was a 1987 single by which group?", 
+                          ["Oasis", "The Beatles", "The Smashing Pumpkins", "Wet Wet Wet"], "d", 2)
     end_time = time.time()
     total_time = end_time - start_time
     print("You completed the Quiz in {:.2f} seconds. Awesome!".format(total_time))
