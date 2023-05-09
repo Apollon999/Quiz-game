@@ -9,6 +9,23 @@ The Quiz will test the player's knowledge about some of the worlds mysteries!
 
 ## README Table content
 * [Introduction](#introduction)
+* [User Experience - UX](#user-experience-ux)
+* [User Stories](#user-stories)
+* [Features](#features)
+* [Intro Message](#intro-message)
+* [Game features](#game-features)
+* [Technologies Used](#technologies-used)
+* [Languages Used](#languages-used)
+* [Python Packages](#python-packages)
+* [Programs Used](#programs-used)
+* [Testing](#testing)
+* [Extendclass](#extendclass)
+* [Lighthouse](#lighthouse)
+* [Bugs and Issues](#bugs-and-issues)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Content](#content)
+* [Resources](#resources)
 
 
 
