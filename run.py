@@ -21,7 +21,9 @@ def ask_question(question, options, correct_answer, points):
     based on wether the answer is correct or not.
     """
     print("({} point) {}".format(points, question))
-    answer = get_valid_input(options)
+    for i in range(len(options)):
+        print("{}. {}".format(chr(i+97), options[i]))
+    answer = get_valid_input([chr(i+97) for i in range(len(options))])
     if answer == correct_answer:
         print("correct")
         return points
@@ -47,10 +49,10 @@ time.sleep(5)
 print("Lets Play!")
 start_time = time.time()
 score = 0
-score += ask_question("In what London district was Jack the Ripper active?", ["a", "b", "c", "d"], "b", 1)
-score += ask_question("By which country's airlines was Flight MH370 operated?", ["a", "b", "c", "d"], "a", 1)
-score += ask_question("What was Winston Churchill talking about when he said 'a riddle, wrapped in a mystery, inside an enigma'?", ["a", "b", "c", "d"], "c", 2)
-score += ask_question("'Sweet little mystery' is a single made in July 1987 by which group?", ["a", "b", "c", "d"], "d", 2)
+score += ask_question("In what London district was Jack the Ripper active?", ["Chelsea", "White Chapel", "Oxford Street", "ST Giles"], "b", 1)
+score += ask_question("By which country's airlines was Flight MH370 operated?", ["Malaysia", "China", "Thailand", "Singapore"], "a", 1)
+score += ask_question("What was Winston Churchill talking about when he said 'a riddle, wrapped in a mystery, inside an enigma'?", ["Mathematics", "Programming", "Russia", "China"], "c", 2)
+score += ask_question("'Sweet little mystery' is a single made in July 1987 by which group?", ["Oasis", "Red Hot Chilli Peppers", "The Smashing Pumpkins", "Wet Wet Wet"], "d", 2)
 end_time = time.time()
 total_time = end_time - start_time
 print("You completed the Quiz in {:.2f} seconds. Awesome!".format(total_time))
